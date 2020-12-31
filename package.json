@@ -1,0 +1,50 @@
+{
+    "name": "ExpInfoVuln",
+    "publisher": "yhy",
+    "description": ".git/.idea/.DS_Store 漏洞利用",
+    "version": "0.1.0",
+    "icon": "src/assets/img/git.png",
+    "engines": "1.6.170",
+    "initEvents": "",
+    "main": "./src/extension.js",
+    "contributes": {
+        "configuration": {
+            "GitHack": {
+              "type": "string",
+              "default": "",
+              "description": "请输入GitHack的路径",
+              "fromDialog": true
+            },
+            "ds_store_exp": {
+              "type": "string",
+              "default": "",
+              "description": "请输入ds_store_exp的路径",
+              "fromDialog": true
+            },
+            "idea_exploit": {
+              "type": "string",
+              "default": "",
+              "description": "请输入idea_exploit的路径",
+              "fromDialog": true
+            },
+            "Python2": {
+              "type": "string",
+              "default": "python",
+              "description": "请输入在当前环境下的Python2的命令，也可以是绝对路径"
+            }
+      },
+        "views": {
+            "vulList": [
+              {
+                "command": "ExpInfoVuln",
+                "title": "ExpInfoVuln",
+                "icon": "src/assets/img/git.png",
+                "visible": "ExpInfoVuln_visi"
+            }
+          ]
+        }
+    },
+    "scripts": {},
+    "devDependencies": {},
+    "dependencies": {}
+}
